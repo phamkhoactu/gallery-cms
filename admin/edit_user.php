@@ -11,6 +11,7 @@ if (empty($_GET['id'])) {
 } else{
     $user = User::find_by_id($_GET['id']);
 if (isset($_POST['update'])) {
+
     echo  $user->username   = $_POST['username'];
     if ($user) {
         $user->username   = $_POST['username'];
@@ -19,10 +20,16 @@ if (isset($_POST['update'])) {
         $user->password   = $_POST['password'];
 
         if(empty($_FILES['user_image'])){
-            
-        }
+            $user->save();
+        } else {
         $user->set_file($_FILES['user_image']);
         $user->save_user_and_image();
+        $user->save();
+
+        redirect("edit_user.php?id={$user->id}");
+
+        }
+       
     } else {
         echo "dkm";
     }
