@@ -23,7 +23,7 @@ if (isset($_POST['update'])) {
             $user->save();
         } else {
         $user->set_file($_FILES['user_image']);
-        $user->save_user_and_image();
+        $user->upload_photo();
         $user->save();
 
         redirect("edit_user.php?id={$user->id}");
