@@ -1,3 +1,9 @@
+<?php if(isset($_POST['submit'])){
+    echo "Gau Gau";
+    } ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +21,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/blog-post.css" rel="stylesheet">
+    <link href="css/blog-home.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -102,17 +108,28 @@
                 <!-- Blog Comments -->
 
                 <!-- Comments Form -->
+
+
+
                 <div class="well">
                     <h4>Leave a Comment:</h4>
-                    <form role="form">
+                    <form role="form" method="post">
+                    
+                    
+                    <div class="form-group">
+                    <label for="author" >Author</label>
+                        <input type="text" class="form-control" name="author" value="" placeholder="">
+                    </div>
                         <div class="form-group">
-                            <textarea class="form-control" rows="3"></textarea>
+                            <textarea  name="body" class="form-control" rows="3"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" name="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
 
                 <hr>
+
+
 
                 <!-- Posted Comments -->
 
