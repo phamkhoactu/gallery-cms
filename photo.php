@@ -1,6 +1,16 @@
-<?php if(isset($_POST['submit'])){
+<?php
+require_once("admin/includes/init.php");
+
+if(empty($_GET['id'])){
+    redirect("index.php");
+}
+$photo = Photo::find_by_id($_GET['id']);
+echo $photo->title;
+
+
+ if (isset($_POST['submit'])) {
     echo "Gau Gau";
-    } ?>
+}?>
 
 
 
@@ -59,6 +69,9 @@
                     <li>
                         <a href="#">Contact</a>
                     </li>
+                     <li>
+                        <a href="admin/">Admin</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -114,8 +127,8 @@
                 <div class="well">
                     <h4>Leave a Comment:</h4>
                     <form role="form" method="post">
-                    
-                    
+
+
                     <div class="form-group">
                     <label for="author" >Author</label>
                         <input type="text" class="form-control" name="author" value="" placeholder="">
