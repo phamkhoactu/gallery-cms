@@ -67,15 +67,14 @@ class User extends Db_object
             if (move_uploaded_file($this->tmp_path, $target_path)) {
                 
                     unset($this->tmp_path);
-                    return true;
+                      
+
                 
             } else {
                 $this->errors[] = "The file directory probably does not have permission";
                 return false;
             }
-
-            $this->create();
-
+             $this->create();
         }
     }
     public  function image_path_and_placeholder(){

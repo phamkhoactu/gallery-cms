@@ -17,7 +17,9 @@ if (isset($_POST['create'])) {
         $user->password   = $_POST['password'];
 
         $user->set_file($_FILES['user_image']);
-        $user->save_user_and_image();
+        if($user->upload_photo()){
+            echo "OK";
+        }
     }
 }
 
@@ -64,7 +66,6 @@ if (isset($_POST['create'])) {
                             <div class="form-group">
 
                                 <label for="username">Username</label>
-                                input
                                 <input type="text" name="username" class="form-control">
                             </div>
 
