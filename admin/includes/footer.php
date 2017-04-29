@@ -35,7 +35,7 @@
         chart.draw(data, options);
       }
     </script>
-<?php echo $Photo::count_all(); ?>
+
 </body>
 
 </html>
