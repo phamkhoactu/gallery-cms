@@ -5,13 +5,11 @@ if (!$session->is_signed_in()) {
 ?>
 
 <?php
-if(empty($_GET['id'])){
+if (empty($_GET['id'])) {
     redirect("photos.php");
 }
 
 $comments = Comment::find_the_comment($_GET['id']);
-
-
 
 ?>
         <!-- Navigation -->
@@ -46,7 +44,11 @@ $comments = Comment::find_the_comment($_GET['id']);
                             comments
                             <small>Subheading</small>
                         </h1>
-                        <a href="add_comment.php" class="btn btn-primary" title="">Add comment</a>
+
+
+
+
+
                         <div class="col-md-12">
                         <table class="table table-hover">
                             <thead>
