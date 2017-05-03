@@ -35,6 +35,9 @@ $users = User::find_all();
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
+                        <p class="bg-success">
+                            <?php echo $message; ?>
+                        </p>
                         <h1 class="page-header">
                             userS
                             <small>Subheading</small>

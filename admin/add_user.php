@@ -18,8 +18,12 @@ if (isset($_POST['create'])) {
 
         $user->set_file($_FILES['user_image']);
         if($user->upload_photo()){
-            echo "OK";
+            $user->save();
+             $session->message("This photo record: <b>{$user->username}</b> has been updated ");
+            redirect("users.php");
+    
         }
+       
     }
 }
 
@@ -56,7 +60,7 @@ if (isset($_POST['create'])) {
                             userS
                             <small>Subheading</small>
                         </h1>
- <form action="add_user.php" method="post" accept-charset="utf-8"
+ <form action="" method="post" accept-charset="utf-8"
  enctype="multipart/form-data">
 
                             <div class="col-md-6 col-md-offset-3">

@@ -10,6 +10,7 @@ if(empty($_GET['id'])){
 
 $photo = Photo::find_by_id($_GET['id']);
 if($photo){
+	$session->message("This photo record: <b>{$photo->filename}</b> has been updated ");
     $photo->delete_photo();
     redirect("photos.php");
 } else {

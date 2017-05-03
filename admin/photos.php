@@ -35,6 +35,7 @@ $photos = Photo::find_all();
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
+                    <p class="bg-success"><?php echo $message; ?></p>
                         <h1 class="page-header">
                             PHOTOS
                             <small>Subheading</small>
@@ -55,7 +56,7 @@ $photos = Photo::find_all();
                             <?php foreach ($photos as $photo): ?>
                                 <tr>
                                     <td>
-                                    <img class="admin-photo-thumbnail" src="<?php echo $photo->picture_path(); ?>" alt="">
+                                    <img class="admin-photo-thumbnail img-responsive" src="<?php echo $photo->picture_path(); ?>" alt="">
                                     <div class="pictures_link">
                                         <a href="delete_photo.php?id=<?php echo $photo->id; ?>" title="">Delete</a>
                                         <a href="edit_photo.php?id=<?php echo $photo->id; ?>" title="">Edit </a>
