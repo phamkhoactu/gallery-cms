@@ -19,7 +19,7 @@ if (isset($_POST['create'])) {
         $user->set_file($_FILES['user_image']);
         if($user->upload_photo()){
             $user->save();
-             $session->message("This photo record: <b>{$user->username}</b> has been updated ");
+             $session->message("This user record: <b>{$user->username}</b> has been create ");
             redirect("users.php");
     
         }

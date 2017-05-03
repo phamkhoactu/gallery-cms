@@ -8,6 +8,8 @@
     <script src="js/bootstrap.min.js"></script>
      <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
      <script src="js/scripts.js" type="text/javascript" charset="utf-8" async defer></script>
+      <script src="js/dropzone.js" type="text/javascript" charset="utf-8" async defer></script>
+     <script src="js/scripts.js" type="text/javascript" charset="utf-8" async defer></script>
      <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);

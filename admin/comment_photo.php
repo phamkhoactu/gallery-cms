@@ -40,6 +40,9 @@ $comments = Comment::find_the_comment($_GET['id']);
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
+                    <p class="bg-success">
+                            <?php echo $message; ?>
+                        </p> 
                         <h1 class="page-header">
                             comments
                             <small>Subheading</small>
@@ -66,7 +69,7 @@ $comments = Comment::find_the_comment($_GET['id']);
                                     <td>
                                         <?php echo $comment->author; ?>
                                         <div class="pictures_link">
-                                            <a href="delete_comment_photo.php?id=<?php echo $comment->id; ?>" title="">Delete</a>
+                                            <a href="delete_comment_photo.php?id=<?php echo $comment->id;?>&photo_id=<?php echo $_GET['id']; ?>" title="">Delete</a>
                                         </div>
 
                                     </td>
